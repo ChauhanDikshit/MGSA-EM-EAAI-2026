@@ -8,6 +8,21 @@ It also includes an **IDE-EDA** (**I**mproved **D**ifferential **E**volution + *
 
 ---
 
+## Core idea (high level)
+
+MGSA-EM:
+1. **Sorts the population** by fitness and partitions it into **multiple layers** (top → bottom).
+2. Uses **competitive learning** inside each layer: individuals are paired, producing **winners** and **losers**.
+3. Updates:
+   - **Losers** learn from winners (plus acceleration/guidance terms).
+   - **Winners** learn from upper-layer individuals (cross-layer guidance + exploitation).
+4. Tracks **stagnation** using a counter per individual (increment if no improvement, reset when improved).
+5. When stagnation is severe, a **restart mechanism** is triggered using:
+   - **Differential mutation** (DE/current-to-pbest/1), optionally using an **archive**,
+   - plus an optional **EDA sampling** step to inject diversity.
+
+---
+
 ## Reference Paper (MGSA-EM)
 
 **D. Chauhan**, *Restart mechanism-based multilevel gravitational search algorithm for global optimization and image segmentation*, **Engineering Applications of Artificial Intelligence**, 163 (2026) 112904. DOI: `10.1016/j.engappai.2025.112904`
@@ -36,21 +51,6 @@ This article presents a multilevel gravitational search algorithm with a restart
 - `IDE_EDA.m`
   Population-level restart operator (**DE/current-to-pbest/1** + archive + optional EDA sampling).
 - Benchmark wrappers (e.g., CEC2017), depending on your setup.
-
----
-
-## Core idea (high level)
-
-MGSA-EM:
-1. **Sorts the population** by fitness and partitions it into **multiple layers** (top → bottom).
-2. Uses **competitive learning** inside each layer: individuals are paired, producing **winners** and **losers**.
-3. Updates:
-   - **Losers** learn from winners (plus acceleration/guidance terms).
-   - **Winners** learn from upper-layer individuals (cross-layer guidance + exploitation).
-4. Tracks **stagnation** using a counter per individual (increment if no improvement, reset when improved).
-5. When stagnation is severe, a **restart mechanism** is triggered using:
-   - **Differential mutation** (DE/current-to-pbest/1), optionally using an **archive**,
-   - plus an optional **EDA sampling** step to inject diversity.
 
 ---
 
