@@ -18,6 +18,13 @@ It also includes an **IDE-EDA** (**I**mproved **D**ifferential **E**volution + *
 
 This article presents a multilevel gravitational search algorithm with a restart mechanism designed to enhance the adaptability and performance of the standard gravitational search algorithm (GSA) in complex optimization tasks. While GSA has been successfully applied in various domains, it often suffers from premature convergence and poor diversity, especially in multimodal landscapes. The proposed algorithm addresses these limitations through three key innovations: (i) a multilevel hierarchical structure based on individual fitness, enabling targeted learning and guidance across layers; (ii) a competition-collaboration mechanism within each layer that classifies individuals as winners or losers and drives differential learning behavior; and (iii) a stagnancy detection and restart mechanism using estimation of distribution and differential mutation strategies to reintroduce diversity and accelerate convergence. Ablation studies confirm that the hierarchical layer design and the control parameter significantly influence the algorithm’s exploration–exploitation balance. In particular, we observed that the restart mechanism improves the average convergence speed on the CEC 2017 benchmark suite compared to baseline GSA. Across 30-, 50-, and 100-dimensional problems, the proposed algorithm consistently outperforms GSA variants and other metaheuristic algorithms, delivering superior accuracy, stability, and convergence rates. Furthermore, the proposed algorithm achieves competitive results in multilevel image thresholding tasks using the Berkeley Segmentation Dataset and Benchmark (BSDS300). These findings highlight the effectiveness of combining hierarchical guidance with adaptive restart strategies in enhancing the robustness and efficiency of GSA in high-dimensional, multimodal optimization scenarios.
 
+<p align="center">
+  <img src="figures/overview.png" width="800">
+</p>
+<p align="center">
+  <em><b>Figure 1.</b> MGSA-EM at a glance: multilevel competition–collaboration learning coupled with an adaptive restart strategy.</em>
+</p>
+
 ---
 
 ## What is inside
@@ -95,13 +102,6 @@ end
 - `figures/statistical.png`
 
 **Embedded figures**
-
-<p align="center">
-  <img src="figures/overview.png" width="800">
-</p>
-<p align="center">
-  <em><b>Figure 1.</b> MGSA-EM at a glance: multilevel competition–collaboration learning coupled with an adaptive restart strategy.</em>
-</p>
 
 <p align="center">
   <img src="figures/layers.png" width="800">
