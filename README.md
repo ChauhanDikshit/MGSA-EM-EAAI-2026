@@ -54,7 +54,7 @@ This article presents a multilevel gravitational search algorithm with a restart
 
 ---
 
-## Restart mechanism: how it’s triggered (important)
+## Restart mechanism: how it is triggered
 
 **Stagnation counters** are maintained per individual. When an individual’s counter exceeds the stagnation threshold `Sg`, the restart mechanism is activated (Algorithm 5–6 in the paper).
 
@@ -101,7 +101,7 @@ end
 - `figures/stagnation.png`
 - `figures/statistical.png`
 
-**Embedded figures**
+**Embedded figures (Significant Results)**
 
 <p align="center">
   <img src="figures/layers.png" width="600">
