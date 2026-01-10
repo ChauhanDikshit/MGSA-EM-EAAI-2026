@@ -104,21 +104,21 @@ end
 **Embedded figures**
 
 <p align="center">
-  <img src="figures/layers.png" width="800">
+  <img src="figures/layers.png" width="600">
 </p>
 <p align="center">
   <em><b>Figure 2.</b> Topology study (50D): heat map of average ranks across benchmark functions for selected population topologies.</em>
 </p>
 
 <p align="center">
-  <img src="figures/omega.png" width="800">
+  <img src="figures/omega.png" width="600">
 </p>
 <p align="center">
   <em><b>Figure 3.</b> Effect of <code>&omega;</code> (50D): heat map of average ranks across benchmark functions for different <code>&omega;</code> settings.</em>
 </p>
 
 <p align="center">
-  <img src="figures/stagnation.png" width="800">
+  <img src="figures/stagnation.png" width="600">
 </p>
 <p align="center">
   <em><b>Figure 4.</b> Stagnation threshold sensitivity (50D): heat map of average ranks across benchmark functions for different <code>Sg</code> values.</em>
