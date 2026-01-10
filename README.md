@@ -135,7 +135,7 @@ Trigger IDE-EDA for the whole population only when a large fraction is stagnated
 ```matlab
 stagRate = mean(counter > Sg);
 if stagRate > 0.5
-    [fitness, p, ...] = IDE_EDA_pop(...);
+    [fitness, p, ...] = IDE_EDA(...);
     counter(:) = 0;
 end
 ```
