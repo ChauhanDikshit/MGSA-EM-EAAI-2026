@@ -31,6 +31,13 @@ DOI: `10.1016/j.engappai.2025.112904`
 - `figures/convergence.png`
 
 **Embedded figures**
+<p align="center">
+  <img src="figures/overview.png" width="800">
+</p>
+<p align="center">
+  <em>Figure 1. MGSA-EM overview (multilevel learning + restart).</em>
+</p>
+
 ![MGSA-EM Overview](figures/overview.png)
 
 ![Different Layers Results](figures/layers.png)
