@@ -110,7 +110,8 @@ stagRate = mean(counter > Sg);
 if stagRate > 0.5
     [fitness, p, ...] = IDE_EDA_pop(...);
     counter(:) = 0;
-end```
+end
+```
 
 
 ---
