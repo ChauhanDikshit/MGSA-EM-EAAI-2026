@@ -1,6 +1,6 @@
 # MGSA-EM-EAAI-2026
 
-## MGSA-EM (Restart mechanism-based Multilevel GSA) — MATLAB
+## MGSA-EM (Restart Mechanism-based Multilevel GSA)
 
 This repository contains a MATLAB implementation of **MGSA-EM**: a *restart mechanism-based multilevel gravitational search algorithm* (GSA) with competition–collaboration learning and an enhanced restart strategy.
 
@@ -10,16 +10,17 @@ It also includes an **IDE-EDA** (**I**mproved **D**ifferential **E**volution + *
 
 ## Reference Paper (MGSA-EM)
 
-**D. Chauhan**, *Restart mechanism-based multilevel gravitational search algorithm for global optimization and image segmentation*, **Engineering Applications of Artificial Intelligence**, 163 (2026) 112904.  
-DOI: `10.1016/j.engappai.2025.112904`
+**D. Chauhan**, *Restart mechanism-based multilevel gravitational search algorithm for global optimization and image segmentation*, **Engineering Applications of Artificial Intelligence**, 163 (2026) 112904. DOI: `10.1016/j.engappai.2025.112904`
 
 ---
 
-## What’s inside
+## What is inside
 
+- `Main_HGSA_EM.m`
+  Run this file
 - `MGSA_EM.m`  
   Main MGSA-EM optimizer (multilevel structure + competition/collaboration updates + stagnation handling).
-- `IDE_EDA_pop.m` (or `IDE_EDA.m`)  
+- `IDE_EDA.m`
   Population-level restart operator (**DE/current-to-pbest/1** + archive + optional EDA sampling).
 - Benchmark wrappers (e.g., CEC2017), depending on your setup.
 
@@ -32,12 +33,14 @@ DOI: `10.1016/j.engappai.2025.112904`
 
 ---
 
-## Figures (README preview)
+## Figures
 
 **Example layout**
 - `figures/overview.png`
-- `figures/restart_flow.png`
-- `figures/convergence.png`
+- `figures/layers.png`
+- `figures/omega.png`
+- `figures/stagnation.png`
+- `figures/statistical.png`
 
 **Embedded figures**
 
@@ -45,35 +48,42 @@ DOI: `10.1016/j.engappai.2025.112904`
   <img src="figures/overview.png" width="800">
 </p>
 <p align="center">
-  <em>Figure 1. MGSA-EM overview (multilevel learning + restart).</em>
+  <em><b>Figure 1.</b> MGSA-EM at a glance: multilevel competition–collaboration learning coupled with an adaptive restart strategy.</em>
 </p>
 
 <p align="center">
   <img src="figures/layers.png" width="800">
 </p>
 <p align="center">
-  <em>Figure 2. Heat map of ranks on benchmark problems of the selected topological structures at 50 dimensions.</em>
+  <em><b>Figure 2.</b> Topology study (50D): heat map of average ranks across benchmark functions for selected population topologies.</em>
 </p>
 
 <p align="center">
   <img src="figures/omega.png" width="800">
 </p>
 <p align="center">
-  <em>Figure 3. Heat map of ranks on benchmark problems for each value of omega at 50 dimensions.</em>
+  <em><b>Figure 3.</b> Effect of <code>&omega;</code> (50D): heat map of average ranks across benchmark functions for different <code>&omega;</code> settings.</em>
 </p>
 
 <p align="center">
   <img src="figures/stagnation.png" width="800">
 </p>
 <p align="center">
-  <em>Figure 4. Heat map of ranks on benchmark problems for each value of <code>Sg</code> at 50 dimensions.</em>
+  <em><b>Figure 4.</b> Stagnation threshold sensitivity (50D): heat map of average ranks across benchmark functions for different <code>Sg</code> values.</em>
 </p>
 
 <p align="center">
   <img src="figures/algorithms.png" width="800">
 </p>
 <p align="center">
-  <em>Figure 5. Comparison of MGSA-EM’s dimension-wise average ranks with GSA variants and other state-of-the-art algorithms.</em>
+  <em><b>Figure 5.</b> Overall performance: dimension-wise average rank comparison of MGSA-EM against GSA variants and state-of-the-art optimizers.</em>
+</p>
+
+<p align="center">
+  <img src="figures/statistical.png" width="800">
+</p>
+<p align="center">
+  <em><b>Figure 6.</b> Win–Tie–Loss summary: average counts where MGSA-EM outperforms (Win), matches (Tie), or underperforms (Loss) compared with competitors.</em>
 </p>
 
 ---
@@ -84,7 +94,7 @@ MGSA-EM:
 1. **Sorts the population** by fitness and partitions it into **multiple layers** (top → bottom).
 2. Uses **competitive learning** inside each layer: individuals are paired, producing **winners** and **losers**.
 3. Updates:
-   - **Losers** learn from winners (plus acceleration / guidance terms).
+   - **Losers** learn from winners (plus acceleration/guidance terms).
    - **Winners** learn from upper-layer individuals (cross-layer guidance + exploitation).
 4. Tracks **stagnation** using a counter per individual (increment if no improvement, reset when improved).
 5. When stagnation is severe, a **restart mechanism** is triggered using:
