@@ -38,19 +38,6 @@ DOI: `10.1016/j.engappai.2025.112904`
   <em>Figure 1. MGSA-EM overview (multilevel learning + restart).</em>
 </p>
 
-![MGSA-EM Overview](figures/overview.png)
-
-![Different Layers Results](figures/layers.png)
-
-![Different Omega Results](figures/omega.png)
-
-![Stagnation Parameter Results](figures/stagnation.png)
-
-![MGSA-EM comparison with other algorithms](figures/algorithm.png)
-
-> Tip: If an image looks too large, you can use an HTML tag to control width:
-> `<img src="figures/overview.png" width="800">`
-
 ---
 
 ## Core idea (high level)
@@ -85,6 +72,35 @@ if stagRate > 0.5
     [fitness,p,...] = IDE_EDA_pop(...);
     counter(:) = 0;
 end
+
+
+<p align="center">
+  <img src="figures/layers.png" width="800">
+</p>
+<p align="center">
+  <em>Figure 2. Heat map of ranks on benchmark problems of the selected topological structures at 50 dimensions.</em>
+</p>
+
+<p align="center">
+  <img src="figures/omega.png" width="800">
+</p>
+<p align="center">
+  <em>Figure 3. Heat map of ranks on benchmark problems for each value of omega at 50 dimensions.</em>
+</p>
+
+<p align="center">
+  <img src="figures/stagnation.png" width="800">
+</p>
+<p align="center">
+  <em>Figure 4. Heat map of ranks on benchmark problems of each value of 𝑆𝑔 at 50 dimensions.</em>
+</p>
+
+<p align="center">
+  <img src="figures/algorithms.png" width="800">
+</p>
+<p align="center">
+  <em>Figure 5. The comparison of MGSA-EM’s dimension-wise average ranks with GSA variants and other state-of-the-art algorithms.</em>
+</p>
 
 ---
 
