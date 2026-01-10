@@ -1,6 +1,4 @@
-# MGSA-EM-EAAI-2026
-
-## MGSA-EM (Restart Mechanism-based Multilevel GSA)
+# MGSA-EM (Restart Mechanism-based Multilevel GSA)
 
 This repository contains a MATLAB implementation of **MGSA-EM**: a *restart mechanism-based multilevel gravitational search algorithm* (GSA) with competition–collaboration learning and an enhanced restart strategy.
 
@@ -88,14 +86,14 @@ end
 - **ω sensitivity** → Fig. 3  
 - **Sg sensitivity (stagnation threshold)** → Fig. 4  
 - **Average ranks vs baselines** → Fig. 5  
-- **Win/Tie/Loss summary** → Fig. 6  
+- **Win/Tie/Loss summary (Statistical Test)** → Fig. 6  
 
 ---
 
 ## Figures
 
 **Example layout**
-- `figures/overview.png`
+- `figures/overview.png` (above, Fig. 1)
 - `figures/layers.png`
 - `figures/omega.png`
 - `figures/stagnation.png`
