@@ -8,7 +8,7 @@ It also includes an **IDE-EDA** (**I**mproved **D**ifferential **E**volution + *
 
 ---
 
-## Core idea (high level)
+## Core idea
 
 MGSA-EM:
 1. **Sorts the population** by fitness and partitions it into **multiple layers** (top → bottom).
