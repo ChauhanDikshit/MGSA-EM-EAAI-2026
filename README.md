@@ -25,6 +25,23 @@ DOI: `10.1016/j.engappai.2025.112904`
 
 ---
 
+**Example layout**
+- `figures/overview.png`
+- `figures/restart_flow.png`
+- `figures/convergence.png`
+
+**Embedded figures**
+![MGSA-EM Overview](figures/overview.png)
+
+![Restart mechanism (IDE-EDA) flow](figures/restart_flow.png)
+
+![Convergence example](figures/convergence.png)
+
+> Tip: If an image looks too large, you can use an HTML tag to control width:
+> `<img src="figures/overview.png" width="800">`
+
+---
+
 ## Core idea (high level)
 
 MGSA-EM:
@@ -81,3 +98,4 @@ end
   doi = {10.1016/j.ins.2022.11.029},
   publisher={Elsevier}
 }
+
